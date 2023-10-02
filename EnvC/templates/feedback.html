@@ -1,0 +1,25 @@
+{% extends "DRY.html" %}
+{% block start %}
+
+<h1 style="text-align: center">Feedback</h1>
+
+<div class="container">
+<div class="row">
+<div class="col-md-6 offset-md-3">
+         <form action="feedback" method="position">
+                {{form.as_p}}
+
+                <div class="conatiner text-center">
+                        <button type="Submit" class="btn btn-primary">
+                                Submit
+                        </button>
+
+                </div>
+
+        </form>
+</div>
+</div>
+</div>
+
+
+{%  endblock %}
