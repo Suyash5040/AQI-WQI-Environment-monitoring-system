@@ -1,0 +1,27 @@
+{% extends "DRY.html" %}
+{% block start %}
+{% include 'nav.html' %}
+
+
+
+
+<div class="conatiner text-center"> 
+<form action="{% url 'feedback' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+   
+    {{ form.as_p }}
+ 
+        <button type="Submit" class="btn btn-primary">
+                Submit
+        </button>
+    </form> 
+</div>
+    
+   
+
+
+
+
+
+
+{%  endblock %}
