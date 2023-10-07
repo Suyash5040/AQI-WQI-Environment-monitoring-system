@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>EnviroConnect</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-       
-    
 
-<!-- Style.css -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EnviroConnect</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <!-- Style.css -->
     <style>
-
-
-        header{
+        header {
             color: green;
         }
 
 
-        .goog-te-gadget{
+        .goog-te-gadget {
             color: transparent !important;
         }
+
         .goog-te-gadget .goog-te-combo {
             color: black !important;
-         }
-         #google_translate_element {
+        }
+
+        #google_translate_element {
             color: transparent;
-          }
-          #google_translate_element a {
+        }
+
+        #google_translate_element a {
             display: none;
-          }
-       
+        }
+
 
 
 
         div {
             border: solid thin;
+            border-collapse: collapse;
         }
 
         ul {
@@ -73,6 +76,7 @@
         li a:hover,
         .dropdown:hover .dropbtn {
             background-color: green;
+            text-decoration: underline;
         }
 
         li.dropdown {
@@ -103,42 +107,54 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+        .arrow {
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
     </style>
 </head>
 
 
-    
-    <body>
+
+<body>
 
 
-       <!-- Header -->
-        <div>
-            <header>
-                <h2>EnviroConnect</h2>
-            </header>
-        </div>
+    <!-- Header -->
+    <div>
+        <header>
+            <h2>EnviroConnect</h2>
+        </header>
+    </div>
 
 
 
-        <!--  Navbar   -->
+    <!--  Navbar   -->
     <div style="position: sticky;position: -webkit-sticky; top: 0;">
         <ul>
             <li class="dropdown">
-                <a href="" class="dropbtn">AQI</a>
+                <a href="" class="dropbtn">AQI&nbsp;&nbsp;<i class="arrow down"></i></a>
                 <div class="dropdown-content">
                     <a href="/AQI/" target="_black">Link 1</a>
                     <a href="#">Link 2</a>
                 </div>
             </li>
             <li class="dropdown">
-                <a href="" class="dropbtn">WQI</a>
+                <a href="" class="dropbtn">WQI&nbsp;&nbsp;<i class="arrow down"></i></a>
                 <div class="dropdown-content">
                     <a href="/WQI/" target="_black">Link 1</a>
                     <a href="#">Link 2</a>
                 </div>
             </li>
             <li class="dropdown">
-                <a href="" class="dropbtn">Environment          </a>
+                <a href="" class="dropbtn">Environment&nbsp;&nbsp;<i class="arrow down"></i></a>
                 <div class="dropdown-content">
                     <a href="/Environment/" target="_black">Link 1</a>
                     <a href="#">Link 2</a>
@@ -149,33 +165,36 @@
             <li><a href="/About/">About</a></li>
             <li style="float: right"><a href="">Sign In</a></li>
 
-            <li style="float: right";><div id="google_translate_element"></div>       
+            <li style="float: right" ;>
+                <div id="google_translate_element"></div>
                 <script type="text/javascript">
-                    function googleTranslateElementInit() 
-                    {
-                      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 'google_translate_element');
                     }
                 </script>
-                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></li>
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </li>
         </ul>
     </div>
 
 
 
-       {% block start %}
+    {% block start %}
 
 
 
-        {%  endblock %}
+    {% endblock %}
 
 
 
-        
 
-        <div>
-            <footer>
-                footer
-            </footer>
-        </div>   
-    </body>
+
+    <div>
+        <footer>
+            footer
+        </footer>
+    </div>
+</body>
+
 </html>
