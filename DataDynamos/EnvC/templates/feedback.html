@@ -1,27 +1,31 @@
-{% extends "DRY.html" %}
-{% block start %}
+{% extends "DRY.html" %} 
+
+{% block start %} 
 {% include 'nav.html' %}
 
 
 
+<h1 class="text-center my-3">Feedback</h1>
 
-<div class="conatiner text-center"> 
-<form action="{% url 'feedback' %}" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-   
-    {{ form.as_p }}
- 
-        <button type="Submit" class="btn btn-primary">
+
+<div class="col-md-6 offset-md-3">
+    <div class="card">
+        <div class="card-body">
+            <form action="{% url 'feedback' %}" method="POST" enctype="multipart/form-data">
+                
+                {% csrf_token %} {{ form.as_p }}
+
+                <button type="Submit" class="btn btn-primary">
                 Submit
         </button>
-    </form> 
+            </form>
+        </div>
+
+    </div>
 </div>
-    
-   
 
 
 
 
 
-
-{%  endblock %}
+{% endblock %}
