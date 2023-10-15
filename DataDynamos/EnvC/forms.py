@@ -4,9 +4,6 @@ from .models import userfeed
 from django.forms import ModelForm
 
 
-
-   
-
 class user(forms.ModelForm):
     name=forms.TextInput()
     email=forms.EmailField()

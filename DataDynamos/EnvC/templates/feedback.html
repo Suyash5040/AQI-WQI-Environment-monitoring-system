@@ -1,7 +1,4 @@
-{% extends "DRY.html" %} 
-
-{% block start %} 
-{% include 'nav.html' %}
+{% extends "DRY.html" %} {% block start %} {% include 'nav.html' %}
 
 
 
@@ -12,10 +9,10 @@
     <div class="card">
         <div class="card-body">
             <form action="{% url 'feedback' %}" method="POST" enctype="multipart/form-data">
-                
+
                 {% csrf_token %} {{ form.as_p }}
 
-                <button type="Submit" class="btn btn-primary">
+                <button type="Submit" class="btn btn-primary" style="position: relative; left: 40%;">
                 Submit
         </button>
             </form>

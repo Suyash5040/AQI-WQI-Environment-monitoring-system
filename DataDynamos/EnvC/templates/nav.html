@@ -14,13 +14,12 @@
 
     <!-- Style.css -->
     <style>
-        body {
-            margin: 0;
-            background-color: rgb(250, 255, 245)
+        .logo {
+            height: 40px;
         }
         
-        .head {
-            background-color: rgb(50, 168, 82);
+        body {
+            margin: 0;
         }
         
         .goog-te-gadget {
@@ -39,17 +38,12 @@
             display: none;
         }
         
-        div {
-            border: solid thin;
-            border-collapse: collapse;
-        }
-        
-        ul {
+        .navb {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #333;
+            background-color: #01bf43;
         }
         
         li {
@@ -76,8 +70,13 @@
         
         li a:hover,
         .dropdown:hover .dropbtn {
-            background-color: green;
+            background-color: rgb(0, 178, 0);
             color: white;
+            border-radius: 20px;
+        }
+        
+        li.head:not(.nohover):hover {
+            border: 1px solid #0814bf;
         }
         
         li.dropdown {
@@ -127,24 +126,23 @@
 
 
 <body>
+
+    {% load static %}
     <!-- Header -->
-    <div class="head">
-        <header>
-            <a href="/home/" style="  text-decoration: none; color: white;">
-                <h2>EnviroConnect</h2>
-            </a>
-        </header>
-    </div>
+
 
 
 
     <!--  Navbar   -->
     <div id="1" style="position: sticky;position: -webkit-sticky; top: 0;">
 
+        <ul class="navb">
 
-
-
-        <ul>
+            <li style="margin-top: 5px;">
+                <a class="head" href="/home/" style=" color: white; ">
+                    <h2 style="margin-left:5px; font-size:25px;">EnviroConnect <img class="logo" src="{% static 'EC logo.png' %}" alt="#"></h2>
+                </a>
+            </li>
 
 
 
@@ -172,7 +170,7 @@
             <li><a href="/industry/">For Industry</a></li>
             <li><a href="/feedback/">Feedback</a></li>
             <li><a href="/About/">About</a></li>
-            <li style="float: right"><a href="">Sign In</a></li>
+            <li style="float: right; background-color:rgba(75, 255, 123, 0.492); border-radius: 20px; margin:5px; margin-top:15px; "><a href="" style="color: #ffffff; font-family: Georgia, 'Times New Roman', Times, serif;">Login / Sign up</a></li>
 
 
 

@@ -1,9 +1,119 @@
-{% extends "DRY.html" %} {% block start %} {% include 'nav.html' %}
+{% extends "DRY.html" %} {% block start %} {% include 'nav.html' %} {% load static %}
 
-<h2>Suyash Gupta</h2>
-<h2>Yash Soni</h2>
-<h2>Rehan Khan</h2>
-<h2>Laveena Pahuja</h2>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a7ce01c9a7.js" crossorigin="anonymous"></script>
+
+<style>
+    .team {
+        width: 95%;
+        height: 500px;
+        margin: 35px
+    }
+    
+    .about-team {
+        padding: 50px 100px 50px 500px;
+        font-size: 30px;
+        font-weight: bolder;
+    }
+    
+    .team-containers {
+        display: flex;
+    }
+    
+    .containers {
+        width: 250px;
+        height: 250px;
+        border: 1px solid;
+        margin: 50px;
+        border-radius: 15px;
+    }
+    
+    .container-image {
+        height: 70%;
+        width: 100%;
+        border: 1px rebeccapurple;
+        background-color: lightyellow;
+    }
+    
+    .container-content {
+        height: 30%;
+        width: 100%;
+        border: 1px solid;
+        border-radius: 0px 0px 15px 15px;
+    }
+    
+    i {
+        margin: 0px 50px 0px 10px;
+    }
+    
+    .team-name {
+        font-size: 18px;
+        line-height: 10px;
+        padding-left: 50px;
+        font-weight: bolder;
+    }
+</style>
+
+
+
+<p class="about-team">About Team Members</p>
+
+
+
+
+
+<div class="team">
+    <div class="team-containers">
+        <div class="containers">
+            <div class="container-image">
+                <img src="{% static 'suyash2.png' %}" style=" width:254px;  overflow:hidden; object-fit: cover;" alt="#">
+            </div>
+            <div class="container-content">
+                <p class="team-name">Suyash Gupta</p>
+
+                <span><i class="fa-thin fa-envelope">x  </i></span><span><i class="fa-thin fa-link"></i></span><span><i class="fa-solid fa-code-compare"></i></span>
+            </div>
+        </div>
+        <div class="containers">
+            <div class="container-image">
+                <img src="" alt="">
+            </div>
+            <div class="container-content">
+                <p class="team-name">Yash Soni</p>
+
+                <span><i class="fa-thin fa-envelope"></i></span><span><i class="fa-thin fa-link"></i></span><span><i class="fa-solid fa-code-compare"></i></span>
+
+            </div>
+        </div>
+        <div class="containers">
+            <div class="container-image">
+                <img src="" alt="">
+            </div>
+            <div class="container-content">
+                <p class="team-name">Rehan Khan</p>
+
+                <span><i class="fa-thin fa-envelope"></i></span><span><i class="fa-thin fa-link"></i></span><span><i class="fa-solid fa-code-compare"></i></span>
+
+            </div>
+        </div>
+        <div class="containers">
+            <div class="container-image">
+                <img src="" alt="">
+            </div>
+            <div class="container-content">
+                <p class="team-name">Laveena Pahuja</p>
+
+                <span><i class="fa-thin fa-envelope"></i></span><span><i class="fa-thin fa-link"></i></span><span><i class="fa-solid fa-code-compare"></i></span>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 
 {% endblock %}
