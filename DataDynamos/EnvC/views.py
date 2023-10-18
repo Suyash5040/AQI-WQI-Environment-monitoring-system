@@ -2,8 +2,8 @@ from django.http import HttpResponseRedirect
 from django.http import HttpResponseBadRequest
 from django.shortcuts import redirect, render
 
-from EnvC.models import userfeed
-from .forms import user
+from EnvC.models import *
+from .forms import *
 
 import razorpay
 from django.views.decorators.csrf import csrf_exempt
@@ -34,7 +34,15 @@ def Environment(request):
 
 
 
-def industry(request):
+def industry(request ):
+
+
+    form2=indus(request.POST)
+    if form2.is_valid():
+        form2.save()
+        return redirect(home)
+
+
     if request.method=='POST':
         client = razorpay.Client(auth=("rzp_test_4135eGDYhDKQzy", "QDUNleqh9rmUJtovo28tZgKG"))
 
@@ -45,16 +53,14 @@ def industry(request):
 
                 }
         payment = client.order.create({'amount': 'amount', 'currency': 'INR','payment_capture': '1'})
+
+
+    else:
+        form2 = indus()
+        return render(request, 'industry.html', {'form2': form2}) 
             
-    context = {'page': 'Industry Page'}
-    return render(request, "industry.html", context )
-
-@csrf_exempt
-def success(request):  # sourcery skip: remove-unreachable-code
-    context = {'page': 'Success page'}
-    return render(request, "success.html", context)
-
-
+        
+    
 
 
 
@@ -90,3 +96,8 @@ def About(request):
 
 
                                                                                                                                                                     
+
+
+
+
+            

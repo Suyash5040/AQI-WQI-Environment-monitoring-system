@@ -14,6 +14,10 @@
 
     <!-- Style.css -->
     <style>
+        .whole{
+            height:100px;
+        }
+
         .logo {
             height: 40px;
         }
@@ -41,8 +45,7 @@
         .navb {
             list-style-type: none;
             margin: 0;
-            padding: 0;
-            overflow: hidden;
+            padding: 0;         
             background-color: #01bf43;
         }
         
@@ -134,7 +137,7 @@
 
 
     <!--  Navbar   -->
-    <div id="1" style="position: sticky;position: -webkit-sticky; top: 0;">
+    <div class="whole" id="1" style="position: sticky;position: -webkit-sticky; top: 0;">
 
         <ul class="navb">
 
@@ -149,8 +152,8 @@
             <li class="dropdown">
                 <a href="" class="dropbtn">AQI&nbsp;&nbsp;<i class="arrow down"></i></a>
                 <div id="2" class="dropdown-content">
-                    <a href="/AQI/" target="_black">Link 1</a>
-                    <a href="#">Link 2</a>
+                    <a href="/AQI/" target="_black">Dashboard</a>
+                    <a href="#">Insight</a>
                 </div>
             </li>
             <li class="dropdown">
@@ -163,8 +166,8 @@
             <li class="dropdown">
                 <a href="" class="dropbtn">Environment&nbsp;&nbsp;<i class="arrow down"></i></a>
                 <div id="4" class="dropdown-content">
-                    <a href="/Environment/" target="_black">Link 1</a>
-                    <a href="#">Link 2</a>
+                    <a href="/Environment/" target="_black">Dashboard</a>
+                    <a href="#">Insight</a>
                 </div>
             </li>
             <li><a href="/industry/">For Industry</a></li>

@@ -1,16 +1,18 @@
 
 from django import forms
-from .models import userfeed
+from .models import *
 from django.forms import ModelForm
 
 
 class user(forms.ModelForm):
     name=forms.TextInput()
     email=forms.EmailField()
+    location=forms.TextInput()
     Feedback=forms.TextInput()
     class Meta:
         model = userfeed
-        fields = ("name", "email", "Feedback")
+      
+        fields = ("name", "email", "location", "Feedback")
     
 
     def __init__(self, *args, **kwargs):
@@ -19,7 +21,25 @@ class user(forms.ModelForm):
             visible.field.widget.attrs['class'] = 'form-control'
 
 
-        for field in self.fields.values(): 
-            field.error_messages = {'required': 'The field {fieldname} is required'.format( fieldname=field.label)}
+
+
+
+class indus(forms.ModelForm):
+    name=forms.TextInput()
+    email=forms.EmailField()
+    location=forms.TextInput()
+    Domain=forms.CharField()
+    AboutIndustry=forms.TextInput()
+    class Meta:
+        model = indusfeed
+        fields = ("name", "email", "location", "domain", "AboutIndustry")
+    
+
+    def __init__(self, *args, **kwargs):
+        super(indus, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+
+     
 
            

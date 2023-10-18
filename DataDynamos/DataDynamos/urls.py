@@ -16,7 +16,7 @@ urlpatterns = [
     path('industry/', industry, name="industry"),
     path('About/', About, name="About"),
     path('nav/', nav, name="nav"),
-    path('industry/success/', success, name="success"),
+
    
 
    
