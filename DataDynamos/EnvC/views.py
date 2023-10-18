@@ -35,8 +35,7 @@ def Environment(request):
 
 
 def industry(request ):
-
-
+    
     form2=indus(request.POST)
     if form2.is_valid():
         form2.save()

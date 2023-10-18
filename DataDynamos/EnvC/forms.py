@@ -27,7 +27,7 @@ class user(forms.ModelForm):
 class indus(forms.ModelForm):
     name=forms.TextInput()
     email=forms.EmailField()
-    location=forms.TextInput()
+    location=forms.TextInput()                  
     AboutIndustry=forms.TextInput()
     class Meta:
         model = indusfeed
