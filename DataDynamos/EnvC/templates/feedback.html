@@ -1,7 +1,7 @@
 {% extends "DRY.html" %} {% block start %} {% include 'nav.html' %}
 <style>
     body {
-        background: #93d172;
+        background: linear-gradient(to right, rgb(121, 237, 144), rgb(185, 228, 251));
     }
 </style>
 
@@ -17,7 +17,7 @@
 
                 {% csrf_token %} {{ form.as_p }}
 
-                <button type="Submit" class="btn btn-primary" style="position: relative; left: 40%;">
+                <button type="Submit" class="btn btn-primary" style="position: relative; left: 40%;background: linear-gradient(to right, rgb(5, 231, 157), rgb(83, 192, 251));">
                 Submit
         </button>
             </form>

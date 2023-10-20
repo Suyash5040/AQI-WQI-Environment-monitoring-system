@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% comment %}
+    <meta name="viewport" content="width=device-width, initial-scale=1"> {% endcomment %}
     <link rel="stylesheet" href="">
 
 
@@ -14,10 +15,12 @@
 
     <!-- Style.css -->
     <style>
-        .whole{
-            height:100px;
+        .whole {
+            height: 100px;
+            fill-opacity: 0.4;
+            box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 2000px 0 rgba(0, 0, 0, 0.19);
         }
-
+        
         .logo {
             height: 40px;
         }
@@ -45,8 +48,8 @@
         .navb {
             list-style-type: none;
             margin: 0;
-            padding: 0;         
-            background-color: #01bf43;
+            padding: 0;
+            /* background-color: #01bf43; */
         }
         
         li {
@@ -56,8 +59,8 @@
         li a,
         .dropbtn {
             display: inline-block;
-            color: white;
-            text-align: center;
+            color: #05386b;
+            font-size: 20px;
             padding: 14px 16px;
             text-decoration: none;
         }
@@ -87,6 +90,7 @@
         }
         
         .dropdown-content {
+            color: #05386b;
             display: none;
             position: absolute;
             background-color: white;
@@ -112,7 +116,7 @@
         }
         
         .arrow {
-            border: solid white;
+            border: solid #05386b;
             border-width: 0 2px 2px 0;
             display: inline-block;
             padding: 3px;
@@ -142,8 +146,9 @@
         <ul class="navb">
 
             <li style="margin-top: 5px;">
-                <a class="head" href="/home/" style=" color: white; ">
-                    <h2 style="margin-left:5px; font-size:25px;">EnviroConnect <img class="logo" src="{% static 'EC logo.png' %}" alt="#"></h2>
+
+                <a class="head" href="/home/" style=" color: #05386b; ">
+                    <h2 style="margin-left:5px; font-size:30px;">EnviroConnect <img class="logo" src="{% static 'EC logo.png' %}" alt="#"></h2>
                 </a>
             </li>
 
