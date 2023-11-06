@@ -1,0 +1,174 @@
+{% extends "DRY.html" %} {% block start %} {% include 'nav.html' %} {% load static %}
+
+
+
+
+
+<style>
+    body {
+        background-color: rgb(28, 217, 113);
+    }
+    
+    .team {
+        width: 95%;
+        height: 500px;
+        margin: auto;
+        
+        
+    }
+    
+    .about-team {
+        padding: 50px 0px 0px 0px;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+        color: white;
+    }
+    
+    .team-containers {
+        display: flex;
+    }
+    
+    .containers {
+        width: 250px;
+        height: 250px;
+        border: 1px solid;
+        margin: 50px;
+        border-radius: 15px;
+    }
+    
+    .container-image {
+        height: 70%;
+        width: 100%;
+        border: 1px rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.842);
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+    
+    .container-content {
+        height: 30%;
+        width: 100%;
+        border: 1px solid;
+        border-radius: 0px 0px 15px 15px;
+    }
+    
+    .team-name {
+        font-size: 18px;
+        line-height: 10px;
+        padding-left: 50px;
+        font-weight: bolder;
+        margin-top: 5px;
+        color: white;
+        font-family: cursive;
+    }
+</style>
+
+
+
+<p class="about-team">About Team Members</p>
+
+
+
+
+
+<div class="team">
+    <div class="team-containers">
+
+        <div class="containers" style="margin-left: 42%;">
+            <div class="container-image">
+                <img src="{% static 'suyash2.png' %}" style=" width:254px;  overflow:hidden; object-fit: cover;" alt="#">
+            </div>
+            <div class="container-content">
+                <p class="team-name">Suyash Gupta</p>
+
+            </div>          
+
+    </div>
+</div>
+
+
+
+
+
+<div class="team" >
+    <div class="team-containers">
+
+      
+        <div class="containers" style="margin-left: 42%;">
+            <div class="container-image">
+                <img src="" style=" width:254px;  overflow:hidden; object-fit: cover;" alt="#">
+            </div>
+            <div class="container-content">
+                <p class="team-name">Yash Soni</p>
+            </div>
+        </div>
+          
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="team">
+    <div class="team-containers">
+
+        <div class="containers" style="margin-left: 42%;">
+            <div class="container-image">
+                <img src="{% static 'Rehan.png' %}" style=" width:254px; overflow:hidden;
+                 object-fit: cover ;" alt="#">
+            </div>
+            <div class="container-content">
+                <p class="team-name">Rehan Khan</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="team">
+    <div class="team-containers">
+
+        <div class="containers" style="margin-left: 42%;">
+            <div class="container-image">
+                <img src="{% static 'Laveena.png' %}" style=" width:254px; overflow: hidden;" alt="#">
+            </div>
+            <div class="container-content">
+                <p class="team-name">Laveena Pahuja</p>
+            </div>
+        </div>
+
+      
+    </div>
+</div>
+
+
+
+
+
+
+<div class="team">
+    <div class="team-containers">
+
+    
+        <div class="containers" style="margin-left: 42%;">
+            <div class="container-image">
+                <img src="" style=" width:254px; overflow: hidden;" alt="#">
+            </div>
+            <div class="container-content">
+                <p class="team-name">Yash Girothia</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

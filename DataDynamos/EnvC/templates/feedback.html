@@ -1,0 +1,33 @@
+{% extends "DRY.html" %} {% block start %} {% include 'nav.html' %}
+<style>
+    body {
+        background: linear-gradient(to right, rgb(121, 237, 144), rgb(185, 228, 251));
+    }
+</style>
+
+
+
+<h1 class="text-center my-3" style="color: white;">Feedback</h1>
+
+<p style="text-align:center; color:white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size:20px">Tell about AQI, WQI & Environment conditions of your location</p>
+<div class="col-md-6 offset-md-3">
+    <div class="card">
+        <div class="card-body">
+            <form action="{% url 'feedback' %}" method="POST" enctype="multipart/form-data">
+
+                {% csrf_token %} {{ form.as_p }}
+
+                <button type="Submit" class="btn btn-primary" style="position: relative; left: 40%;background: linear-gradient(to right, rgb(5, 231, 157), rgb(83, 192, 251));">
+                Submit
+        </button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
