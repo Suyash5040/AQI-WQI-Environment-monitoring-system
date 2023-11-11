@@ -1,0 +1,43 @@
+{% extends "DRY.html" %} {% block start %} {% include 'nav.html' %}
+
+
+<style>
+    body {
+        background: linear-gradient(to right, rgb(121, 237, 144), rgb(185, 228, 251));
+    }
+</style>
+
+
+
+<h1 class="text-center my-3" style="color: white;">Suggestion Page</h1>
+
+<p style="text-align:center; color:white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size:20px">Apply for Suggestions for your establishments</p>
+<div class="col-md-6 offset-md-3">
+    <div class="card">
+        <div class="card-body">
+            <form action="{% url 'industry' %}" method="POST" enctype="multipart/form-data">
+
+                {% csrf_token %} {{ form2.as_p }}
+
+
+                <script src="https://checkout.razorpay.com/v1/checkout.js" data-key="rzp_test_4135eGDYhDKQzy" data-amount="1000" data-currency="INR" data-order_id="{{payment.id}}" data-buttontext="Submit" data-name="EnviroConnect" data-description="Land Suggestions for your establishment"
+                    data-image="https://example.com/your_logo.jpg" data-prefill.name="Suyash Gupta" data-prefill.email="SuyashGupta@example.com" data-theme.color="#0ec430"></script>
+
+
+
+
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}
